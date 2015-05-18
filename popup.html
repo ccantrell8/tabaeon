@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="tabaeonApp">
+	<head>
+		<title>TabAeon</title>
+		<script src="js/vendor/angular.min.js"></script>
+		<script src="js/app/scripts.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body ng-controller="MainCtrl">
+		<h1>TabAeon</h1>
+		<table cellspacing="0" cellpadding="0">
+			<thead>
+				<td>Tab</td><td>Duration</td><td>Refresh</td>
+			</thead>
+			<tbody>
+				<tr ng-repeat="tab in aeon track by $index">
+					<td class="tabName">{{$index+1}}. {{tab.name}}</td>
+					<td>
+						<input type="number" name="duration" maxlength="5" ng-model="aeon[$index].duration"/> secs
+					</td>
+					<td>
+						<input type="checkbox" ng-model="aeon[$index].refresh"/> <label>Enable</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button ng-click="start()" ng-show="!isRunning">Start</button>
+		<button ng-click="stop()" ng-show="isRunning">Stop</button>
+	</body>
+</html>

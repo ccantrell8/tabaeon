@@ -1,0 +1,28 @@
+table {
+	width: 420px;
+	margin: 0 0 10px 0;
+}
+
+table thead {
+	font-weight: bold;
+}
+
+table td {
+	padding: 3px 5px;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #CFCFCF
+}
+
+table input[type="number"] {
+	width: 50px;
+}
+
+.tabName {
+	width: 230px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+}
